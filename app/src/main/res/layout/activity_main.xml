@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material700"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="80dp"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#DDDDDD"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/materialCardView2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                android:layout_marginTop="66dp"
+                android:background="@drawable/no_transactions"
+                android:elevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+            <FrameLayout
+                android:id="@+id/materialCardView5"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="#DDDDDD"
+                app:cardCornerRadius="0dp"
+                android:layout_marginTop="190dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/materialCardView2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transactions"
+                    android:textColor="@color/material700"
+                    android:layout_marginTop="52dp"
+                    android:layout_marginStart="16dp"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="no past transactions"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="4dp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"/>
+
+            </FrameLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView3"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                app:cardCornerRadius="8dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/material800"
+                app:layout_constraintTop_toBottomOf="@id/materialCardView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100 reward points = 1 putatoe credit"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 putatoe credit = 1 rupee"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Can be redeemed to your bank account on amount above $10,000 "
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView4"
+                android:layout_width="match_parent"
+                android:layout_height="94dp"
+                android:layout_marginHorizontal="6dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="14dp"
+                app:layout_constraintTop_toBottomOf="@id/materialCardView3"
+                tools:layout_editor_absoluteX="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/rupee"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_toLeftOf="@id/credit"
+                        android:drawableTop="@drawable/rupee_ic"
+                        android:padding="0dp"
+                        android:text="Add\nMoney"
+                        android:textAllCaps="false"
+                        android:textColor="@color/material700"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/credit"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/gift"
+                        android:padding="0dp"
+                        android:text="Redeem\nas Credit"
+                        android:textAllCaps="false"
+                        android:textColor="@color/material700"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/bank"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_toEndOf="@+id/credit"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/bank"
+                        android:padding="0dp"
+                        android:text="Send Money\nto Bank"
+                        android:textAllCaps="false"
+                        android:textColor="@color/material700"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView2"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="90dp"
+                app:cardBackgroundColor="@color/material800"
+                app:cardCornerRadius="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/material600"
+                app:strokeWidth="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rupee"
+                                android:layout_marginTop="30dp"
+                                android:layout_marginLeft="20dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:textSize="30sp"
+                                android:layout_marginTop="25dp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Available Balance"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="20dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/p_credit"
+                                android:layout_marginLeft="20dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="500"
+                                android:textColor="@color/white"
+                                android:layout_marginLeft="8dp"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:layout_marginTop="4dp"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reward Points"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="2dp"/>
+
+                    </LinearLayout>
+
+
+                    <Button
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="78dp"
+                        android:layout_marginTop="75dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="50dp"
+                        android:backgroundTint="@color/white"
+                        android:padding="10dp"
+                        android:text="Transfer Money"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+
+                </RelativeLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius_ui">18dp</dimen>
+    <color name="dark">#00897B</color>
+    <drawable name="border">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <stroke
+                android:width="2dp"
+                android:color="#00897B"/>
+        </shape>
+
+    </drawable>
+</resources>
